@@ -25,8 +25,8 @@ header {
 }
 
 h1,
-h2,
-h3 {
+h2
+{
     font-family: var(--heading-font);
     text-align: center;
     color: white;
@@ -38,11 +38,7 @@ h2 {
     padding: 0;
 }
 
-h3 {
-    color: black;
-    font-size: medium;
-    padding: 0;
-}
+
 
 nav {
     background-color: rgb(89, 88, 90);
@@ -75,7 +71,7 @@ main {
     grid-column: 1 / 3;
     display: flex;
     flex-wrap: nowrap;
-    
+    align-self: center;
 }
 
 .card {
