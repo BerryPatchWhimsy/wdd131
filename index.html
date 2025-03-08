@@ -7,41 +7,65 @@
     <title>WDD 131 -Dynamic Web Fundamentals- Anissa Pooley</title>
     <meta name="description" content="WDD 131- Dynamic Web Fundamentals, Anissa Pooley, index/home page">
     <meta name="author" content="Anissa Pooley">
+    <script src="scripts/getdates.js" defer></script>
     <link rel="stylesheet" href="styles/base.css">
-    <script type="defer" src="getdates.js"></script>
+
 </head>
 
 <body>
     <header>
         <h1>WDD 131 - Dynamic Web Fundamentals - Anissa Pooley</h1>
         <nav>
-            <a href="#">LinkedIn</a>
+            <a href="www.linkedin.com/in/anissa-pooley-600344355">LinkedIn</a>
             <a href="https://byupw.instructure.com/">Canvas</a>
             <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/4?lang=eng&id=p35#p35">Scripture</a>
             <a href="#">Final Project</a>
         </nav>
     </header>
     <main>
-        <section class="card">
+        <section class="card1">
             <h2>About Me</h2>
             <div>
-                <img src="images/profile.jpg" alt="Profile Picture">
-                <p>This is me</p>
+                <div class="personal">
+                    <img src="images/profile-pic.jpg" alt="Profile Picture">
+                    <p>Hello, I am Anissa Pooley. I live in Carlin, Nevada. I am a mom of five wonderful kids.
+                        I enjoy playing piano and singing. I also love to paint and draw. We love to go out as a
+                        family and explore the mountains of Nevada. We often explore ghost towns and find items
+                        left from the old mines. Of course, we have to be very careful and watch out for
+                        abandoned mine shafts. Most have been fenced off, but every now and then we find one
+                        that has been forgotten.
+                    </p>
+                </div>
+                <div class="nevada">
+                    <img src="images/northernNevada.jpeg" alt="Humbolt River in the Mountains" width="200">
+                    <p>Most people associate Nevada with the dry, hot desert of Las Vegas. But, the area I live in is nearby the Humbolt River and surrounded by hills, mountains and
+                        vast open space.
+                    </p>
+                </div>
             </div>
         </section>
-        <section class="card">
+        <section class="card2">
             <h2>Web Dev Resources</h2>
             <div>
                 <img src="" alt="">
-                <p>Lorem ipsum...</p>
+                <p>
+                    <ul class="box">
+                        <li><a href="#">Dev.to Community</a></li>
+                        <li><a href="#">Smashing Magazine</a></li>
+                        <li><a href="#">CSS Tricks</a></li>
+                        <li><a href="#">W3 Schools</a></li>
+                        <li><a href="#">Udemy</a></li>
+                        <li><a href="#">Image Placeholder</a></li>
+                    </ul>
+                </p>
             </div>
         </section>
     </main>
     <footer>
         <p>
             ©️
-            <span id="" currentyear"></span>
-            Anissa Pooley | Nevada
+            <span id="currentyear"></span>
+            🍓 Anissa Pooley 🍓  Nevada, USA
         </p>
         <p id="lastModified"></p>
 
