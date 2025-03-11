@@ -99,7 +99,8 @@ main {
 
 .card1 img {
     float: right;
-    width: 20%;
+    width: 100px;
+    
     height: auto;
     margin: 1rem;
     border-radius: 6px;
