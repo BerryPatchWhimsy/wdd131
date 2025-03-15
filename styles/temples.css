@@ -108,7 +108,7 @@ nav {
 img {
     max-width: 200px;
     /* transform:scale(); */
-    max-height: auto;
+    /* max-height: auto; 'auto' not valid CSS*/
     border: 3px double black;
 }
 
