@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Open+Sans&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,12 +8,12 @@
 
 body {
     font-family: 'Handlee', cursive;
-    background-color: rgb(240, 240, 240);
+    background-color: whit;
 }
 
 header, main
 footer {
-    max-width: 500px;
+    max-width: 600px;
     border: 1px solid lightgray;
 }
 
@@ -20,19 +22,22 @@ header {
     grid-gap: 1rem;
     margin: 0 auto;
     background-color: rgb(121, 222, 222);
-    box-shadow: 0 0 10px darkgray;
+    box-shadow: 0 0 10px gray;
 }
 
 h1 {
-    font-family: 'Open sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.5em;
+    margin: 1rem 0 0 1rem;
 }
 
 h2 {
-    font-family: "Open sans", cursive;
-    font-size: 1.25em;
+    margin: 1rem 0;
+    font-family: "Open Sans", cursive;
+    font-size: 1.2em;
     color: black;
     text-align: center;
+    text-decoration: underline;
 }
 
 #menu {
@@ -41,7 +46,7 @@ h2 {
     background: none;
     position: absolute;
     right: 8px;
-    top: 2px;
+    top: 8px;
 }
 
 #menu::before {
@@ -100,13 +105,12 @@ main {
 }
 
 .temples {
-    margin: 1rem;
+    margin: 2.5rem;
 }
 
 img {
     max-width: 100%;
-    border: 3px double black;
-    
+    border: 4px double black;
 }
 
 figure {
@@ -118,11 +122,11 @@ figcaption {
 }
 
 img:hover {
-    box-shadow: 0 0 50px darkgray;
+    box-shadow: 0 0 10px gray;
 }
 
 footer {
-    font-family: "Open sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     background: rgb(121, 222, 222);
     text-align: center;
     padding: 0.5rem;
