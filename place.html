@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Page - Scotland</title>
+    <meta name="description" content="Info about Scotland page">
+    <meta name="author" content="Anissa Pooley">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Almendra+SC&family=Cinzel+Decorative:wght@400&family=Delius&family=Modern+Antiqua&display=swap"
+        rel="stylesheet">
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Scotland</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <!-- <source srcset="images/hero-scotland-wide.webp" media="max-width: 1050px"> -->
+                <!-- <source srcset="images/hero-scotland-medium.webp" media="max-width: 1000px"> -->
+                <!-- <source srcset="images/hero-scotland-small.webp" media="max-width: 700px"> -->
+                <!-- <img src="images/hero-scotland-small.webp" alt="Scottish Castle" width="500" height="250">; -->
+                <img src="images/hero-scotland-small.webp"
+                    srcset="images/hero-scotland-small.webp 500w, images/hero-scotland-wide.webp 1050w" sizes="100vw"
+                    alt="Scottish Castle">
+            </picture>
+            <div class="data">
+                <h2>Data</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Area:</th>
+                            <td>77,901 sq km</td>
+                        </tr>
+                        <tr>
+                            <th>Population:</th>
+                            <td>5,439,842</td>
+                        </tr>
+                        <tr>
+                            <th>Capital:</th>
+                            <td>Edinburgh</td>
+                        </tr>
+                        <tr>
+                            <th>Languages:</th>
+                            <td>Scots, Scottish Gaelic, English</td>
+                        </tr>
+                        <tr>
+                            <th>Currency:</th>
+                            <td>Pound sterling</td>
+                        </tr>
+                        <tr>
+                            <th>Time Zone:</th>
+                            <td>UTC+0, UTC+1</td>
+                        </tr>
+                        <tr>
+                            <th>Calling Code:</th>
+                            <td>+44</td>
+                        </tr>
+                        <tr>
+                            <th>Internet TLD:</th>
+                            <td>.scot</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="weather">
+                <h2>Weather</h2>
+                <div class="weatherimg">
+                    <img src="images/partly-cloudy-icon.svg" alt="Sun with Cloud">
+                </div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Temperature:</th>
+                            <td id="temperature">10 °C</td>
+                        </tr>
+                        <tr>
+                            <th>Conditions:</th>
+                            <td>Sunny to partly cloudy</td>
+                        </tr>
+                        <tr>
+                            <th>Wind:</th>
+                            <td id="windspeed">43 Km/h</td>
+                        </tr>
+                        <tr>
+                            <th>Wind Chill:</th>
+                            <td>
+                                <span id="windchill"></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>
+            ©️ <span id="currentyear"></span>
+            🍓 Anissa Pooley 🍓 Nevada, USA
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
