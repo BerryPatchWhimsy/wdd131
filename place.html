@@ -22,15 +22,19 @@
     </header>
     <main>
         <div class="hero">
-            <picture>
-                <!-- <source srcset="images/hero-scotland-wide.webp" media="max-width: 1050px"> -->
-                <!-- <source srcset="images/hero-scotland-medium.webp" media="max-width: 1000px"> -->
-                <!-- <source srcset="images/hero-scotland-small.webp" media="max-width: 700px"> -->
-                <!-- <img src="images/hero-scotland-small.webp" alt="Scottish Castle" width="500" height="250">; -->
-                <img src="images/hero-scotland-small.webp"
-                    srcset="images/hero-scotland-small.webp 500w, images/hero-scotland-wide.webp 1050w" sizes="100vw"
-                    alt="Scottish Castle">
-            </picture>
+            <div class="heropic">
+                <!-- <picture> -->
+                    <!-- <img src="images/hero-scotland-small.webp"
+                        srcset="images/hero-scotland-small.webp 500w, images/hero-scotland-wide.webp 1050w" sizes="100vw"
+                        alt="Scottish Castle"> -->
+                <!-- </picture> -->
+                <picture> 
+                    <source srcset="images/hero-scotland-small.webp" media="(max-width: 700px)">
+                    <source srcset="images/hero-scotland-medium.webp" media="(max-width: 1000px)">
+                    <source srcset="images/hero-scotland-wide.webp" media="(max-width: 1050px)">
+                    <img src="images/hero-scotland-wide.webp" alt="Scottish Castle" width="1050" height="500">
+                </picture>
+            </div>
             <div class="data">
                 <h2>Data</h2>
                 <table>

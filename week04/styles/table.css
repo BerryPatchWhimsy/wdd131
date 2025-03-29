@@ -1,0 +1,52 @@
+:root {
+    --back: rgb(81, 6, 104);
+    --back2: rgb(207, 154, 223);
+    --zebra: rgb(222, 220, 222);
+    --border: gray;
+}
+
+body {
+    font-family: "Cinzel Decorative", sans-serif;
+}
+table {
+    margin: 10px auto;
+    border: var(--border);
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgb(110, 106, 106);
+}
+
+caption {
+    caption-side: bottom;
+    padding: 1rem;
+    font-family: "Delius", sans-serif;
+    font-size: medium;
+}
+
+thead {
+    background-color: var(--back);
+    color: white;
+    font-size: 20px;
+}
+
+th, td {
+    padding: 7px 10px;
+    border: 1px solid var(--border);
+}
+
+td {
+    text-align: center;
+}
+
+
+.blank {
+    background-color: var(--back);
+}
+
+.headings {
+    background-color: var(--back2);
+    font-size: medium;
+    color: black;
+}
+tbody tr:nth-child(odd) {
+    background-color: var(--zebra);
+}

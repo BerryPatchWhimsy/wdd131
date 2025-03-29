@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Handlee', cursive;
+    font-size: small;
+    background-color: white;
+}
+
+header,
+main, footer {
+    max-width: 600px;
+    border: 1px solid lightgray;
+}
+
+header {
+    display: grid;
+    grid-gap: 1rem;
+    margin: 0 auto;
+    background-color: rgb(121, 222, 222);
+    box-shadow: 0 0 10px gray;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    margin: 1rem 0 0 1rem;
+}
+
+h2 {
+    margin: 1rem 0;
+    font-family: "Open Sans", cursive;
+    font-size: 1.2em;
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "Ⓧ";
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: rgb(121, 222, 222);
+    color: rgb(121, 222, 222);
+}
+
+.navigation li {
+    /*hides nav in mobile size*/
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    color: black;
+    padding: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.5s;
+    font-size: clamp(1rem, 2vmin, 1.5rem);
+    /*added, need 2 and 1.5?*/
+}
+
+.navigation a:hover {
+    color: rgb(63, 62, 64);
+    background-color: rgb(240, 240, 240);
+    text-decoration: underline;
+    border-radius: 3px;
+    font-weight: 700;
+}
+
+/* button is clicked then open class is toggled */
+.open li {
+    display: block;
+}
+
+.active::before {
+    content: "Home";
+    text-decoration: underline;
+    color: rgb(255, 96, 23);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+
+/* .templeCard {
+    margin: 2.5rem;
+    display: flex;
+} */
+/* 
+.templeCard {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 0 2px 4px gray;
+    max-width: 300px;
+}
+
+.templeCard img {
+    width: 100%;
+    border-radius: 8px;
+} */
+
+table {
+    border-collapse: collapse;
+    border: 1px solid ;
+}
+
+td {
+    /* padding: 0.75rem; */
+    text-align: left;
+}
+
+.name {
+    font-size: large;
+    /* font-weight: bold; */
+}
+
+thead th {
+    font-size: xlarge;
+}
+
+th {
+    padding: 0.75rem;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    border: 4px double black;
+
+}
+
+/* figure {
+    margin: 1rem 0;
+}
+
+figcaption {
+    text-align: center;
+} */
+
+img:hover {
+    box-shadow: 0 0 10px gray;
+}
+
+footer {
+    font-family: "Open Sans", sans-serif;
+    background: rgb(121, 222, 222);
+    text-align: center;
+    padding: 0.5rem;
+}
+
+p {
+    color: black;
+}
+
