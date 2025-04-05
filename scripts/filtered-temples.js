@@ -6,7 +6,7 @@ hambutton.addEventListener('click', () => {
     hambutton.classList.toggle('open');
 });
 
-const temples = [
+const templesInfo = [
     {
         templeName: "Aba Nigeria",
         location: "Aba, Nigeria",
@@ -84,8 +84,49 @@ const temples = [
         area: "72000",
         imageURL: "https://churchofjesuschristtemples.org/assets/img/temples/san-diego-california-temple/san-diego-california-temple-50105.jpg"
     },
-    // Add more temple objects here...
+    
 ];
+
+// function createTempleCards() {
+//     const container = document.querySelector("#templeCard");
+
+//     templesInfo.forEach(temple => {
+//         const cardElement = document.createElement('table');
+//         cardElement.classList = 'card';
+
+//         cardElement.innerHTML = `
+//             <thead>
+//                  <tr>
+//                      <th colspan="2">${temple.templeName}</th>
+//                  </tr>
+//              </thead>
+//              <tbody>
+//                  <tr>
+//                      <th>Location: </th>
+//                      <td>${temple.location}</td>
+//                  </tr>
+//                  <tr>
+//                      <th>Dedicated: </th>
+//                      <td>${temple.dedicated}</td>
+//                  </tr>
+//                  <tr>
+//                      <th>Size: </th>
+//                      <td>${temple.area} sq ft</td>
+//                  </tr>
+//              </tbody>
+//              <tfoot>
+//                  <picture>
+//                      <img src="${temple.imageURL}" alt="${temple.templeName} Temple" loading="lazy" width="400px" height="300px">
+//                  </picture>
+//              </tfoot>
+//         `;
+
+//         container.appendChild(cardElement);
+
+//     });
+// }
+
+// createTempleCards();
 
 // function setTempleName(temple) {
 //     document.querySelector("#templeName").innerHTML = temple.templeName;
@@ -109,7 +150,6 @@ const temples = [
 
 //make template as table-- maybe parameter templeName?
 function templeInfoTemplate(temple) {
-
     return `
     <thead>
         <tr>
@@ -152,25 +192,61 @@ function renderTempleInfo(temple) {
 
 
 
-//call functions
+// function createTempleCards() {
 
-// temples.forEach(function (temple) {
-//     console.log(${renderTempleInfo(temple) });
+//     const container = document.querySelector("#temples");
+
+//     const card = document.createElement("div");
+//     card.classsList.add("card");
+
+//     templesInfo.forEach(temple => {
+//         let card = document.createElement("div");
+//         card.classsList.add("card");
+
+//         const tName = document.createElement("h2");
+//         tName.textContent = temple.templeName;
+//         card.appendChild(tName);
+
+//         const templeLocation = document.createElement("p");
+//         templeLocation.textContent = `Location: ${temple.location}`;
+//         card.appendChild(templeLocation);
+
+//         const templeDedicated = document.createElement("p");
+//         templeDedicated.textContent = `Dedicated: ${temple.dedicated}`;
+//         card.appendChild(templeDedicated);
+
+//         const templeSize = document.createElement("p");
+//         templeSize.textContent = `Size: ${temple.area}`;
+//         card.appendChild(templeSize);
+
+//         const templeImage = document.createElement("img");
+//         templeImage.textContent = `<img src="${temple.imageURL}" alt="${temple.templeName} Temple" loading="lazy" width="400px" height="300px">`;
+//         card.appendChild(templeImage);
+
+//         container.appendChild(card);  
+//     });
+
+// }
+
+// function renderTempleInfo(temple) {
+//     const html = temple.map(createTempleCards);
+//     document.querySelector("#temple tbody").innerHTML = html.join("");
+// }
+
+renderTempleInfo(templesInfo);
+// renderTempleInfo(templesInfo);
+
+// templeData.forEach((temple) => {
+//     let card = document.createElement("div");
+//     card.classList.add("card");
+
+//     let templeName = document.createElement("h2");
+//     templeName.textContent = temple.name;
+//     card.appendChild(templeName);
+//     // Create and append any other elements (address, phone, etc.)
+//     document.querySelector("#templeContainer").appendChild(card);
 // });
 
-renderTempleInfo(temples);
-
-const container = document.querySelector("#templeCard");
-
-temples.forEach(temple => {
-    const card = document.createElement("div");
-    card.classList.add("card");
-
-    const body = renderTempleInfo(temple);
-
-    card.appendChild(body);
-    container.appendChild(card);
-});
 // setTempleImageURL(temples);
 
 
@@ -181,3 +257,38 @@ temples.forEach(temple => {
 // The total area of the temple in square feet.
 // The provided image of the temple(an absolute address), making sure to include an appropriate alt value such as the name of the temple.
 // Use native lazy loading for each temple image.
+
+// const container = document.querySelector("#temples");
+
+// templesInfo.forEach((temple) => {
+//     const card = document.createElement("div");
+//     card.classList = "card";
+
+//     const content = `
+//         <thead>
+//             <tr>
+//                 <th colspan="2">${temple.templeName}</th>
+//             </tr>
+//         </thead>
+//         <tbody>
+//             <tr>
+//                 <th>Location: </th>
+//                 <td>${temple.location}</td>
+//             </tr>
+//             <tr>
+//                 <th>Dedicated: </th>
+//                 <td>${temple.dedicated}</td>
+//             </tr>
+//             <tr>
+//                 <th>Size: </th>
+//                 <td>${temple.area} sq ft</td>
+//             </tr>
+//         </tbody>
+//         <tfoot>
+//             <picture>
+//                 <img src="${temple.imageURL}" alt="${temple.templeName} Temple" loading="lazy" width="400px" height="300px">
+//             </picture>
+//         </tfoot>
+//             `;
+//     container.innerHTML += content;
+// });

@@ -1,0 +1,90 @@
+:root {
+    --secondary-color: #16425b;
+    --tertiary-color: #2e5266;
+    --primary-color: #4d8693;
+    --accent2-color: #467642;
+    --accent1-color: #dcff66;
+
+    --heading-font: 'Charmonman', cursive;
+    --paragraph-font: 'Artifika', sans-serif;    
+
+    --nav-background-color: var(--primary-color);
+    --nav-link-color: white;
+    --nav-hover-link-color: var(--secondary-color);
+    --nav-hover-background-color: white;
+}
+
+/* :root {
+    --primary-color: #4d8693;
+    --secondary-color: #232c33;
+    --tertiary-color: #e0e0ce;
+    --accent1-color: #f2af29;/* ? 
+    --accent3-color: #c44536;
+    --accent2-color: #640007;
+} */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    max-width: 1050xp;
+    padding: 1rem;
+}
+
+h1, h2 {
+    font-family: var(--heading-font);
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+header {
+    padding: 10px;
+}
+
+p {
+    padding: 0.5rem;
+}
+
+nav {
+    font-size: 1.2rem;
+    display: flex;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.hFont {
+    font-family: var(--heading-font);
+}
+
+.pFont {
+    font-family: var(--paragraph-font);
+}
+
+.headingColor {
+    color: var(--secondary-color);
+}
+
+.paragraphColor {
+    color: black;
+}
+
+.backgroundColor {
+    color: var(--primary-color);
+}
+
+.accent1Color {
+    color: var(--accent1-color);
+}
+
+.accent2Color {
+    color: var(--accent2-color);
+}

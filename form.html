@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description" content="Product Review Form">
+    <meta name="author" content="Anissa Pooley">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:ital@0;1&display=swap"
+        rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form  method="get" action="review.html" id="form1" class="form1">
+            <fieldset>
+                <legend>Product Information</legend>
+                <label>Product Name*
+                    <select id="productName" name="name" required>
+                        <option value="">Choose a Product &#9662;</option>
+                    </select>
+                </label>
+                <div>Overall Rating*</div>
+                <label><input type="radio" name="overallRating" id="oneStar" required>&star;</label>
+                <label><input type="radio" name="overallRating" id="twoStar" required>&star; &star;</label>
+                <label><input type="radio" name="overallRating" id="threeStar" required>&star; &star; &star;</label>
+                <label><input type="radio" name="overallRating" id="fourStar" required>&star; &star; &star; &star;</label>
+                <label><input type="radio" name="overallRating" id="fiveStar" required>&star; &star; &star; &star; &star;</label>
+
+                <label class="date">Date of Installation* <input type="date" name="installDate" id="dateInstallation" required></label>
+
+                <div>Which features did you find useful in the product?
+                    <p class="checkbox">(Check all that apply)</p>
+                </div>
+                <label><input type="checkbox" name="design" id="pDesign" value="yes"> Design</label>
+                <label><input type="checkbox" name="durability" id="pDurability" value="yes"> Durability</label>
+                <label><input type="checkbox" name="easeOfUse" id="pEase" value="yes"> Ease of Use</label>
+                <label><input type="checkbox" name="performance" id="pPerformance" value="yes"> Performance</label>
+            </fieldset>
+            <fieldset>
+                <legend>User Information</legend>
+                <label>Written Review (optional)
+                    <textarea name="comment" id="pReview" placeholder="Enter text here..." optional></textarea>
+                </label>
+                <label class="name">Your Name (optional)<input type="text" name="userName" id="name" optional></label>
+            </fieldset>
+            <input type="submit" value="Send My Review">
+        </form>
+    </main>
+    <footer>
+        <p>
+            ©️
+            <span id="currentyear"></span>
+             🍓 Anissa Pooley 🍓 Nevada, USA
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+<script src="scripts/form.js" defer></script>
+<script src="scripts/getdates.js" defer></script>
+</html>
