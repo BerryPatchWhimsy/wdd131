@@ -51,42 +51,64 @@ let submissionCounter = localStorage.getItem(`submissionCounter`) || 0;
 // }
 
 
+// document.addEventListener('DOMContentLoaded', function () {
+//     const form = document.querySelector('#form1'); 
+
+//     if (form) {
+//         form.addEventListener('submit', function (event) {
+//             event.preventDefault();
+
+//             const productName = document.querySelector("#productName").value;
+//             const rateOne = document.querySelector("#oneStar").value;
+//             const rateTwo = document.querySelector("#twoStar").value;
+//             const rateThree = document.querySelector("#threeStar").value;
+//             const rateFour = document.querySelector("#fourStar").value;
+//             const rateFive = document.querySelector("#fiveStar").value;
+//             const date = document.querySelector("#dateInstallation").value;
+//             const design = document.querySelector("#pDesign").value;
+//             const durability = document.querySelector("#pDurability").value;
+//             const easeOfUse = document.querySelector("#pEase").value;
+//             const performance = document.querySelector("#pPerformance").value;
+//             const reviewText = document.querySelector("#pReview").value;
+//             const customerName = document.querySelector("#name").value;
+
+//             const formData = {
+//                 productName: productName,
+//                 rating: [rateOne, rateTwo, rateThree, rateFour, rateFive],
+//                 dateInstalled: date,
+//                 features: [design, durability, easeOfUse, performance],
+//                 reviewtxt: reviewText,
+//                 fullName: customerName
+//             };
+
+//             localStorage.setItem(`formData`, JSON.stringify(formData));
+//             submissionCounter++;
+//             localStorage.setItem(`submissionCounter`, submissionCounter);
+//             counter.textContent = submissionCounter;
+
+//             // form.submit();
+//             form.reset();
+//         });
+//     } else {
+//         console.error("Form element with ID 'form1' not found.");
+//     }
+// });
+
+let pageLoadCount = localStorage.getItem(`pageLoadCount`) || 0;
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('#form1'); 
+    const form = document.querySelector('#form1');
 
     if (form) {
-        form.addEventListener('submit', function (event) {
-            event.preventDefault();
+        window.addEventListener('load', () => {
 
-            const productName = document.querySelector("#productName").value;
-            const rateOne = document.querySelector("#oneStar").value;
-            const rateTwo = document.querySelector("#twoStar").value;
-            const rateThree = document.querySelector("#threeStar").value;
-            const rateFour = document.querySelector("#fourStar").value;
-            const rateFive = document.querySelector("#fiveStar").value;
-            const date = document.querySelector("#dateInstallation").value;
-            const design = document.querySelector("#pDesign").value;
-            const durability = document.querySelector("#pDurability").value;
-            const easeOfUse = document.querySelector("#pEase").value;
-            const performance = document.querySelector("#pPerformance").value;
-            const reviewText = document.querySelector("#pReview").value;
-            const customerName = document.querySelector("#name").value;
-
-            const formData = {
-                productName: productName,
-                rating: [rateOne, rateTwo, rateThree, rateFour, rateFive],
-                dateInstalled: date,
-                features: [design, durability, easeOfUse, performance],
-                reviewtxt: reviewText,
-                fullName: customerName
-            };
-
-            localStorage.setItem(`formData`, JSON.stringify(formData));
-            submissionCounter++;
-            localStorage.setItem(`submissionCounter`, submissionCounter);
-            counter.textContent = submissionCounter;
-
-            form.reset();
+            if (pageLoadCount) {
+                pageLoadCount = parseInt(pageLoadCount) + 1;
+            } else {
+                pageLoadCount = 1;
+            }
+            
+            localStorage.setItem(`pageLoadCount`, pageLoadCount);
+            console.log(`Page Loaded ${pageLoadCount} times.`);
         });
     } else {
         console.error("Form element with ID 'form1' not found.");

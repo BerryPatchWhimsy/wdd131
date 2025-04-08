@@ -85,7 +85,7 @@ main {
     border-radius: 6px;
     padding: .5rem;
     color: var(--accent1-color);
-    max-width: 400px;
+    max-width: 300px;
     width: 100%;
     appearance: none;
 }
@@ -97,6 +97,8 @@ main {
 .form1 input[type="radio"],
 .form1 input[type="checkbox"] {
     margin-right: 6px;
+    transform: scale(1.5);
+    margin-top: 10px;
 }
 
 .form1 input[type="submit"] {
