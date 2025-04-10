@@ -8,12 +8,11 @@
 
 body {
     font-family: 'Handlee', cursive;
-    font-size: small;
     background-color: white;
 }
 
 header,
-main, footer {
+main footer {
     max-width: 600px;
     border: 1px solid lightgray;
 }
@@ -107,73 +106,45 @@ main {
     grid-gap: 1rem;
 }
 
-/* .templeCard {
+div {
+    border: 1px solid gray;
+    text-align: center;
+    background-color: rgb(187, 219, 219);
+    margin: 1rem 0;
+    box-shadow: 0 0 10px gray;
+    align-items: center;
+    min-width: 325px;
+}
+
+.temples {
     margin: 2.5rem;
-    display: flex;
-} */
-/* 
-.templeCard {
+    text-align: center;
+    border: none;
+    box-shadow: none;
     background-color: white;
-    border-radius: 8px;
-    padding: 1rem;
-    margin: 1rem;
-    box-shadow: 0 2px 4px gray;
-    max-width: 300px;
-}
-
-.templeCard img {
-    width: 100%;
-    border-radius: 8px;
-} */
-
-.card {
-    border: 1px solid black;
-    padding: 16px;
-    margin: 16px;
-    text-align: center;
-}
-
-.card img {
-    max-width: 100%;
-    
-}
-table {
-    border-collapse: collapse;
-    border: 1px solid ;
-}
-
-td {
-    /* padding: 0.75rem; */
-    text-align: left;
-}
-
-.name {
-    font-size: large;
-    /* font-weight: bold; */
-}
-
-thead th {
-    font-size: xlarge;
-}
-
-th {
-    padding: 0.75rem;
-    text-align: center;
+    color: none;
 }
 
 img {
     max-width: 100%;
-    border: 4px double black;
-
+    border: 2px solid black;
+    width: 300px;
+    height: 100%;
+    background: black;
+    animation: fade 10s;
+    margin: 1rem 0.5rem;
 }
 
-/* figure {
-    margin: 1rem 0;
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
-figcaption {
-    text-align: center;
-} */
 
 img:hover {
     box-shadow: 0 0 10px gray;
@@ -189,4 +160,3 @@ footer {
 p {
     color: black;
 }
-
