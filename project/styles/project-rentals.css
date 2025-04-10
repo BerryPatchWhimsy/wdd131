@@ -1,0 +1,243 @@
+/* header, nav, footer for all pages */
+
+:root {
+    --secondary-color: #16425b;
+    --tertiary-color: #2e5266;
+    --primary-color: #4d8693;
+    --accent2-color: #467642;
+    --accent1-color: #dcff66;
+
+    --heading-font: 'Charmonman', cursive;
+    --paragraph-font: 'Artifika', sans-serif;
+
+    --nav-background-color: var(--primary-color);
+    --nav-link-color: white;
+    --nav-hover-link-color: white;
+    --nav-hover-background-color: var(--secondary-color);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav,
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    min-width: 325px;
+}
+
+.title {
+    display: none;
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-width: 325px;
+}
+
+.logo img {
+    border-radius: 3px;
+    max-width: 100%;
+    border: 20px solid var(--primary-color);
+    /* object-fit: fill; */
+}
+
+#menu {
+    font-size: 1.75rem;
+    border: 0;
+    background: 0;
+    position: absolute;
+    right: 40px;
+    top: 30px;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "🅇";
+    top: 60px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+nav {
+    justify-content: center;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    color: white;
+    padding: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.5s;
+    font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+
+.navigation a:hover, .rentalsNav a:hover{
+    color: white;
+    background-color: var(--secondary-color);
+    text-decoration: underline;
+    border-radius: 0;
+    font-weight: bold;
+}
+
+
+
+/* button is clicked then open class is toggled */
+.open li {
+    display: block;
+}
+
+.active::before {
+    content: "Rentals";
+    text-decoration: underline;
+    color: var(--accent1-color);
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+header {
+    padding: 10px;
+}
+
+p {
+    padding: 0.5rem;
+}
+
+nav {
+    font-size: 1.2rem;
+    display: flex;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+footer {
+    justify-items: center;
+    padding: 1rem;
+}
+
+footer p {
+    color: white;
+}
+
+/* body of page*/
+.filteredList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    list-style: none;
+}
+
+.rentalsNav {
+    min-width: 325px;
+    background-color: var(--tertiary-color);
+}
+
+.active2::before {
+    content: "All";
+    text-decoration: underline;
+    color: var(--accent1-color);
+}
+
+.filteredList a {
+    color: white;
+    text-decoration: none;
+}
+
+.imageContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    max-width: 600px;
+}
+
+.homesList {
+    margin: 1rem 0;
+    text-align: center;
+    border: none;
+    box-shadow: none;
+    background-color: white;
+}
+
+.homesList div {
+    border: 3px solid var(--secondary-color);
+    border-radius: 5px;
+    text-align: center;
+    background-color: white;
+    margin: 1rem;
+    box-shadow: 0 0 10px gray;
+    align-items: center;
+    min-width: 325px;
+    padding-bottom: 0.5rem;
+}
+
+.homesList p {
+    font-size: 1.25rem;
+    padding: 0;
+}
+
+.homesList h2 {
+    font-size: 2rem;
+    padding-bottom: 0;
+}
+
+.homesList div img {
+    border-bottom: 1px solid var(--secondary-color);
+    border-radius: 0;
+    max-width: 100%;
+    /* width: 300px; */
+    /* height: 100%; */
+    animation: fade 5s;
+    margin: 0;
+    object-fit: fill;
+}
+
+div:hover {
+    text-decoration: underline;
+    border-radius: 0;
+    font-weight: bold;
+    border: 3px solid var(--accent1-color);
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+p {
+    color: black;
+}

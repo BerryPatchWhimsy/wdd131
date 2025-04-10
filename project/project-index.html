@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meyer's Rentals</title>
+    <link rel="icon" type="image/xicon" href="images/M-icon.webp">
+    <meta name="description" content="Home rental business owned by V. Meyers, Carlin, Nevada|meyers-rentals.com">
+    <meta name="author" content="Anissa Pooley">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Artifika&family=Charmonman:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="stylesheet" href="styles/project-large.css">
+</head>
+<body>
+    <header>
+        <div>
+            <button id="menu" title="Hamburger Menu"></button>
+        </div>
+        <h1 class="logo">
+            <img src="images/M-logo.webp" alt="Meyer's Rentals Logo- Small" width="525">
+            <p class="title">Meyer's Rentals</p>
+        </h1>
+        <nav>
+            <ul class="navigation">
+                <li><a href="project-index.html" title="Home" class="active"></a></li>
+                <li><a href="project-rentals.html" title="Rentals">Rentals</a></li>
+                <li><a href="project-forms.html" title="Forms">Forms</a></li>
+                <li><a href="project-contact-us.html" title="Contact Us">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="messages">
+            <div class="welcome">
+                <h2>Welcome Home!</h2>
+                <p>Meyer's Rentals has a variety of homes for you to choose from at an affordable price. </p>
+                <picture class="wImage">
+                    <source srcset="images/hero.webp" media="(max-width: 400px)">
+                    <img src="images/hero.webp" alt="Receiving keys to rental" width="600">
+                </picture>
+            </div>
+            <aside>
+                <figure>
+                    <img src="images/couple-review.webp" alt="Happy couple with keys" width=200px>
+                </figure>
+                <p>"Meyer's helped us find a home that fits our needs AND our budget! Thank you, MEYER'S RENATLS!"</p>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <p>
+            ©️
+            <span id="currentyear"></span>
+            | Anissa Pooley
+            | Nevada, USA
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/project.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</body>
+
+</html>

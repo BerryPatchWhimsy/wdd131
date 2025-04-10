@@ -1,0 +1,109 @@
+@media screen and (min-width: 600px) {
+    /*should use em relative to font rather than px, maybe 40? */
+
+    :root {
+        --secondary-color: #16425b;
+        --tertiary-color: #2e5266;
+        --primary-color: #4d8693;
+        --accent2-color: #467642;
+        --accent1-color: #dcff66;
+    
+        --heading-font: 'Charmonman', cursive;
+        --paragraph-font: 'Artifika', sans-serif;
+    
+        --nav-background-color: var(--primary-color);
+        --nav-link-color: white;
+        --nav-hover-link-color: white;
+        --nav-hover-background-color: var(--secondary-color);
+    }
+    
+    header {
+        max-width: 1500px;
+        display: block;
+        
+        align-items: center;
+        grid-column: 1 / 2;
+        border: 1rem solid var(--primary-color);
+        padding: 0;
+        background-color: none; 
+        justify-content: center;
+    }
+
+    .logo {
+        display: flex;
+        justify-items: center;
+    }
+
+    .logo img {
+        max-width: 200px;
+        height: auto;
+        border: none;
+    }
+   
+    .title {
+        display: inline;
+        align-self: center;
+        margin: 0;
+        font-size: 2.5em;
+        font-family: var(--heading-font);
+        color: black;
+    }
+
+    #menu {
+        display: none;
+    }
+    
+    .navigation {
+        justify-content: space-between;
+        flex-direction: row;   
+    }
+
+    .navigation li {
+        display: block;
+        padding: 0.25rem;
+    }
+
+    .navigation a {
+        flex: 1 1 100%;
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    body {
+        max-width: 1500px;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1f 4fr 1fr;
+        margin: 0 auto;
+        padding: 0;
+    }
+    
+    .messages {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 1.5rem;
+        grid-column: 1 / 2;
+        margin: 2rem 0;
+    }
+
+    .welcome {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .wImage {
+        max-width: 100%;
+    }
+
+    aside {
+        margin: 1rem 1rem 1rem 0;
+    }
+
+    
+
+}
