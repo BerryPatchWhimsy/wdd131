@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meyer's Rentals</title>
+    <link rel="icon" type="image/xicon" href="images/M-icon.webp">
+    <meta name="description" content="Home rental business owned by V. Meyers, Carlin, Nevada|meyers-rentals.com">
+    <meta name="author" content="Anissa Pooley">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Artifika&family=Charmonman:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/project-forms.css">
+    <link rel="stylesheet" href="styles/project-forms-large.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <button id="menu" title="Hamburger Menu"></button>
+        </div>
+        <h1 class="logo">
+            <img src="images/M-logo.webp" alt="Meyer's Rentals Logo- Small" width="525">
+            <p class="title">Meyer's Rentals</p>
+        </h1>
+        <nav>
+            <ul class="navigation">
+                <li><a href="project-index.html" title="Home">Home</a></li>
+                <li><a href="project-rentals.html" title="Rentals">Rentals</a></li>
+                <li><a href="project-forms.html" title="Forms" class="active"></a></li>
+                <li><a href="project-contact-us.html" title="Contact Us">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="qparagraph">
+            <aside>
+                <table>
+                    <tr>
+                        <th>Links</th>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.consumer.gov/sites/www.consumer.gov/files/articles/pdf/pdf-1050g-sample_rental_agreement_basic_beginning_renting_an_apartment_or_house.pdf"
+                                title="rentApp">Rental Application</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://eforms.com/download/2018/03/Employment-Job-Application.pdf" title="jobApp">Job Application
+                        </td>
+                    </tr>
+                </table>
+            </aside>
+            <section>
+                <p class="p1">We are eager to help you with any questions you may have about our properties.</p>
+                <p class="p2">Please fill out the form and we will respond to your inquiries as soon as we can!</p>
+            </section>
+        </div>
+        <form method="get" action="thank-you.html" id="form1" class="form">
+            <legend class="formTitle">Property inquiries</legend>
+            <fieldset class="contactInfo">
+                <legend>Contact Information</legend>
+                
+                <label class="name">* Your Name<input type="text" name="customerName" id="customerName" required></label>
+                
+                <label class="email">* Email<input type="email" id="email" required></label>
+                
+                <label class="pAddress">* Property Address<textarea name="address" id="propertyAddress" placeholder="Enter address here..." required></textarea></label>
+                
+                <label class="date">Today's Date (optional)<input type="date" name="today'sDate" id="formDate"></label>
+            </fieldset>
+            <fieldset class="optionalInfo">
+                <legend>Optional</legend>
+
+                <label class="phone">If you prefer us to contact you by phone:<input type="tel" name="customerTel" id="tel" placeholder="(111) 222 1234"></label>
+                
+                <div>Would you like to recieve email updates?</div>
+                <label><input type="radio" name="emailUpdates" id="emailYes">Yes</label>
+                <label><input type="radio" name="emailUpdates" id="emailNo">No</label>
+
+                <div>Are you interested in recieving our annual newsletter?</div>
+                <label><input type="radio" name="newletter" id="newsYes">Yes</label>
+                <label><input type="radio" name="newletter" id="newsNo">No</label>
+            </fieldset>
+            <input class="button" type="submit" value="Send My Request">
+        </form>
+    </main>
+    <footer>
+        <p>
+            ©️
+            <span id="currentyear"></span>
+            | Anissa Pooley
+            | Nevada, USA
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/project-forms.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</body>
+
+</html>

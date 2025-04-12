@@ -1,0 +1,105 @@
+@media screen and (min-width: 600px) {
+    /*should use em relative to font rather than px, maybe 40? */
+
+    
+
+    header {
+        max-width: 1500px;
+        display: block;
+        align-items: center;
+        grid-column: 1 / 2;
+        border: 1rem solid var(--primary-color);
+        padding: 0;
+        background-color: none;
+        justify-content: center;
+    }
+
+    .logo {
+        display: flex;
+        justify-items: center;
+    }
+
+    .logo img {
+        max-width: 200px;
+        height: auto;
+        border: none;
+    }
+
+    .title {
+        display: inline;
+        align-self: center;
+        margin: 0;
+        font-size: 2.5em;
+        font-family: var(--heading-font);
+        color: black;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .navigation li {
+        display: block;
+        padding: 0.25rem;
+    }
+
+    .navigation a {
+        flex: 1 1 100%;
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    body {
+        max-width: 1500px;
+        /* height: 100vh;*/
+        display: grid;
+        grid-template-columns: 1fr;
+        /*grid-template-rows: 1f 4fr 1fr;
+        margin: 0 auto;
+        padding: 0; */
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 1500px;
+    }
+
+    .qparagraph {
+        justify-content: left;
+    }
+
+    aside {
+        margin-right: 2rem;
+    }
+
+    .qparagraph p {
+        margin-left: 2rem;
+    }
+
+    .form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .25fr auto .25fr;
+    }
+
+    .form fieldset {
+        grid-row: 2 / 3;
+        margin: 1rem;
+        align-items: center;
+    }
+
+    .form input[type="submit"] {
+        grid-row: 3 / 4;
+    }
+
+}

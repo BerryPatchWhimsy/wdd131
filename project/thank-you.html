@@ -12,8 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Artifika&family=Charmonman:wght@400;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/project-contact.css">
-    <link rel="stylesheet" href="styles/project-contact-large.css">
+    <link rel="stylesheet" href="styles/project-forms.css">
+    <link rel="stylesheet" href="styles/project-forms-large.css">
 </head>
 
 <body>
@@ -29,41 +29,17 @@
             <ul class="navigation">
                 <li><a href="project-index.html" title="Home">Home</a></li>
                 <li><a href="project-rentals.html" title="Rentals">Rentals</a></li>
-                <li><a href="project-forms.html" title="Forms">Forms</a></li>
-                <li><a href="project-contact-us.html" title="Contact Us" class="active"></a></li>
+                <li><a href="project-forms.html" title="Forms" class="active"></a></li>
+                <li><a href="project-contact-us.html" title="Contact Us">Contact Us</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div class="officeInfo">
-            <figure id="office"></figure>
-            <section id="map">
-                <img>
-                <div class="phone">
-                    <img>
-                    <p></p>
-                </div>
-                <div class="website">
-                    <img>
-                    <p></p>
-                </div>
-                <div class="address">
-                    <img>
-                    <p></p>
-                </div>
-            </section>
+        <div class="messageContainer">
+            <p class="verification">Your form has been submitted.</p>
+            <p class="thankYou">Thank you for contacting us! We will reach out as soon as possible.</p>
+        </div>
 
-        </div>
-        <div class="testimonials">
-            <p></p>
-            <p></p>
-        </div>
-        <div class="staff">
-            <figure></figure>
-            <figure></figure>
-            <figure></figure>
-        </div>
-        
     </main>
     <footer>
         <p>
@@ -73,9 +49,9 @@
             | Nevada, USA
         </p>
         <p id="lastModified"></p>
+        <p>Submissions: <span id="counter"></span></p>
     </footer>
-    <script src="scripts/project-contact.js" defer></script>
+    <script src="scripts/project-forms.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
 </body>
-
 </html>

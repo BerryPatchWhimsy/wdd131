@@ -90,43 +90,98 @@ const rentalsList = [
     },
 ];
 
-rentalsList.forEach((rental) => {
-    let card = document.createElement("div");
-    card.classList.add = "card";
+createRentalCards(rentalsList);
 
-    let cardImage = document.createElement("img");
-    cardImage.src = rental.imageUrl;
-    cardImage.alt = `${rental.address} house`;
-    cardImage.width = `600`;
-    
-    // cardImage.loading = lazy;
-    card.appendChild(cardImage);
+const bed1Link = document.querySelector("#bed1");
+const bed2Link = document.querySelector("#bed2");
+const bed3Link = document.querySelector("#bed3");
+const rentalsLink = document.querySelector("#all");
 
-    let rate = document.createElement("h2");
-    rate.textContent = `$ ${rental.monthlyRate}/mo`;
-    card.appendChild(rate);
-    
-    let address = document.createElement("p");
-    address.textContent = `${rental.address}`;
-    card.appendChild(address);
+bed1Link.addEventListener("click", () => {
+    bed1Link.classList.add("active2");
+    bed2Link.classList.remove("active2");
+    bed3Link.classList.remove("active2");
+    rentalsLink.classList.remove("active2");
 
-    let info = document.createElement("p");
-    info.textContent = `${rental.bedrooms} bds | ${rental.bathrooms} ba | ${rental.area} sqft`;
-    card.appendChild(info);
-
-    // 
-
-    // let beds = document.createElement("p");
-    // beds.textContent = `${parseInt(rental.bedrooms)} bds |`;
-    // card.appendChild(beds);
-
-    // let baths = document.createElement("p");
-    // baths.textContent = `${parseInt(rental.bathrooms)} ba |`;
-    // card.appendChild(baths);
-
-    // let area = document.createElement("p");
-    // area.textContent = `${parseInt(rental.area)} sqft`;
-    // card.appendChild(area);
-
-    document.querySelector(".homesList").appendChild(card);
+    let bed1 = rentalsList.filter(rental => {
+        const beds = parseInt(rental.bedrooms);
+        return beds == 1;
+    });
+    createRentalCards(bed1);
 });
+
+
+bed2Link.addEventListener("click", () => {
+    bed1Link.classList.remove("active2");
+    bed2Link.classList.add("active2");
+    bed3Link.classList.remove("active2");
+    rentalsLink.classList.remove("active2");
+
+    let bed2 = rentalsList.filter(rental => {
+        const beds = parseInt(rental.bedrooms);
+        return beds == 2;
+    });
+    createRentalCards(bed2);
+});
+
+
+bed3Link.addEventListener("click", () => {
+    bed1Link.classList.remove("active2");
+    bed2Link.classList.remove("active2");
+    bed3Link.classList.add("active2");
+    rentalsLink.classList.remove("active2");
+
+    let bed3 = rentalsList.filter(rental => {
+        const beds = parseInt(rental.bedrooms);
+        if (beds > 3) {
+            return beds > 3;
+        } else {
+            return beds == 3;
+        }
+
+    });
+    createRentalCards(bed3);
+});
+
+
+rentalsLink.addEventListener("click", () => {
+    bed1Link.classList.remove("active2");
+    bed2Link.classList.remove("active2");
+    bed3Link.classList.remove("active2");
+    rentalsLink.classList.add("active2");
+
+    return createRentalCards(rentalsList);
+});
+
+
+function createRentalCards(filteredRentals) {
+    document.querySelector(".homesList").innerHTML = "";
+
+    filteredRentals.forEach((rental) => {
+        let card = document.createElement("div");
+        card.classList.add = "card";
+
+        let cardImage = document.createElement("img");
+        cardImage.src = rental.imageUrl;
+        cardImage.alt = `${rental.address} house`;
+        cardImage.width = `600`;
+
+        // cardImage.loading = lazy;
+        card.appendChild(cardImage);
+
+        let rate = document.createElement("h2");
+        rate.textContent = `$ ${rental.monthlyRate}/mo`;
+        card.appendChild(rate);
+
+        let address = document.createElement("p");
+        address.textContent = `${rental.address}`;
+        card.appendChild(address);
+
+        let info = document.createElement("p");
+        info.textContent = `${rental.bedrooms} bds | ${rental.bathrooms} ba | ${rental.area} sqft`;
+        card.appendChild(info);
+
+        document.querySelector(".homesList").appendChild(card);
+    });
+}
+

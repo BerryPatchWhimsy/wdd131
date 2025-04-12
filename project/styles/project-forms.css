@@ -1,0 +1,324 @@
+:root {
+    --secondary-color: #16425b;
+    --tertiary-color: #2e5266;
+    --primary-color: #4d8693;
+    --accent2-color: #467642;
+    --accent1-color: #dcff66;
+
+    --heading-font: 'Charmonman', cursive;
+    --paragraph-font: 'Artifika', sans-serif;
+
+    --nav-background-color: var(--primary-color);
+    --nav-link-color: white;
+    --nav-hover-link-color: white;
+    --nav-hover-background-color: var(--secondary-color);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav,
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    min-width: 325px;
+}
+
+.title {
+    display: none;
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-width: 325px;
+}
+
+.logo img {
+    border-radius: 3px;
+    max-width: 100%;
+    border: 20px solid var(--primary-color);
+    /* object-fit: fill; */
+}
+
+#menu {
+    font-size: 1.75rem;
+    border: 0;
+    background: 0;
+    position: absolute;
+    right: 60px;
+    top: 50px;
+}
+
+#menu:hover {
+    box-shadow: 0 0 10px black;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "🅇";
+    top: 60px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+nav {
+    justify-content: center;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    color: white;
+    padding: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.5s;
+    font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+
+
+.navigation a:hover {
+    color: white;
+    background-color: var(--secondary-color);
+    text-decoration: underline;
+    border-radius: 0;
+    font-weight: bold;
+}
+
+
+/* button is clicked then open class is toggled */
+.open li {
+    display: block;
+}
+
+.active::before {
+    content: "Forms";
+    text-decoration: underline;
+    color: var(--accent1-color);
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+header {
+    padding: 10px;
+}
+
+.logo p, footer p {
+    padding: 0.5rem;
+}
+
+.logo p {
+    background-color: white;
+}
+
+nav {
+    font-size: 1.2rem;
+    display: flex;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+footer {
+    justify-items: center;
+    padding: 1rem;
+}
+
+
+/* main and body design*/
+body {
+    font-family: var(--paragraph-font);
+    max-width: 600px;
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.qparagraph {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+table {
+    margin: 1rem 0 1rem 1rem;
+    border: 1px solid var(--secondary-color);
+    border-collapse: collapse;
+    box-shadow: 0 0 10px gray;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+    padding: 7px;
+    font-size: 1.5rem;
+}
+
+td {
+    padding: 10px;
+    font-size: 1.25rem;
+}
+
+td a {
+    color: var(--secondary-color);
+}
+
+td a:hover {
+    color: var(--accent1-color);
+    font-weight: bold;
+    text-shadow: 0 0 10px black;
+}
+
+.p1, .p2 {
+    text-align: center;
+    max-width: 500px;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+
+.p1 {
+    border-radius: 5px 5px 0 0;
+    margin-top: 1rem;
+    padding-top: 2rem;
+}
+
+.p2 {
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+}
+
+.form {
+    margin: 1rem;
+    border: 3px solid var(--secondary-color);
+    border-radius: 5px;
+    padding: 10px;
+    /* background-color: var(--tertiary-color); */
+}
+
+.form fieldset {
+    margin: 1rem 0;
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: white;
+}
+
+.form legend {
+    padding: 0.5rem;
+    font-style: italic;
+    font-size: 25px;
+    color: var(--secondary-color);
+}
+
+.form label {
+    display: block;
+    font-size: 18px;
+}
+
+.form div {
+    padding-top: 1rem;
+
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="submit"],
+.form input[type="tel"],
+.form input[type="date"],
+.form textarea {
+    display: block;
+    border: 1px solid var(--primary-color);
+    border-radius: 3px;
+    padding: 0.5rem;
+    color: var(--secondary-color);
+    max-width: 300px;
+    width: 100%;
+    appearance: none;
+    margin-top: .25rem;
+}
+
+.date, .email, .pAddress{
+    padding-top: 1rem;
+}
+
+.form input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.5);
+    margin-top: 10px;
+}
+
+.form input[type="submit"] {
+    border: none;
+    background-image: linear-gradient(var(--primary-color), var(--tertiary-color));
+    color: white;
+    border-radius: 3px;
+    padding: .8rem;
+    width: 90%;
+    max-width: 400px;
+    margin: 1rem 2% 2rem 2%;
+    box-shadow: 1px 1px 7px var(--secondary-color);
+    font-size: 20px;
+
+}
+
+.form input[type="submit"]:hover {
+    background-color: white;
+    background-image: none;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    font-weight: bold;
+}
+
+/* for thank you page*/
+.messageContainer {
+    border: 3px double var(--tertiary-color);
+    margin: 1rem;
+}
+
+.verification {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.thankYou {
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--primary-color);
+}

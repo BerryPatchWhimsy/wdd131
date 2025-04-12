@@ -53,6 +53,10 @@ footer {
     top: 50px;
 }
 
+#menu:hover {
+    box-shadow: 0 0 10px black;
+}
+
 #menu::before {
     content: "☰";
 }
