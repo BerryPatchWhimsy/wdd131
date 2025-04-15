@@ -164,7 +164,7 @@ function createRentalCards(filteredRentals) {
         let cardImage = document.createElement("img");
         cardImage.src = rental.imageUrl;
         cardImage.alt = `${rental.address} house`;
-        cardImage.width = `600`;
+        cardImage.width = 400;
 
         // cardImage.loading = lazy;
         card.appendChild(cardImage);

@@ -92,3 +92,47 @@ document.addEventListener(`DOMContentLoaded`, function () {
         
 //     });
 
+const staffList = [
+    {
+        job: "Manager",
+        photo: "images/manager.webp",
+        name: "V. Meyers"
+    },
+    {
+        job: "Maintenance Manager",
+        photo: "images/maintenance.webp",
+        name: "M. Montgomery"
+    },
+    {
+        job: "Office Secretary",
+        photo: "images/secretary.webp",
+        name: "D. White"
+    }
+];
+
+createStaffCards(staffList);
+
+function createStaffCards() {
+    // document.querySelector(".staff").innerHTML = "";
+    staffList.forEach((member) => {
+        let card = document.createElement("div");
+        card.classList.add = "card";
+
+        let profilePicture = document.createElement("img");
+        profilePicture.src = member.photo;
+        profilePicture.alt = "Profile Picture";
+        profilePicture.loading = "lazy";
+        card.appendChild(profilePicture);
+
+        let jobTitle = document.createElement("h2");
+        jobTitle.textContent = member.job;
+        card.appendChild(jobTitle);
+
+        let memberName = document.createElement("p");
+        memberName.textContent = member.name;
+        card.appendChild(memberName);
+
+        document.querySelector(".staff").appendChild(card);
+    });
+}
+

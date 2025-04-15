@@ -75,15 +75,51 @@
     }
 
     .qparagraph {
-        justify-content: left;
+        display: flex;
+        flex-direction: column;
+        max-width: 1500px;
     }
 
     aside {
         margin-right: 2rem;
     }
 
+    
+    #office {
+        max-width: 815px;
+    }
+
+    .officeInfo {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 2fr 1fr;
+        max-width: 1500px;
+        padding: 0.5rem;
+
+    }
+
+    .mapInfo div{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-left: 0;
+    }
+
     .qparagraph p {
         margin-left: 2rem;
+    }
+
+    .staff {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 1400px;
+        justify-content: center;
+    }
+
+    section {
+        justify-self: center;
+        
     }
 
     .form {
@@ -101,5 +137,4 @@
     .form input[type="submit"] {
         grid-row: 3 / 4;
     }
-
 }
